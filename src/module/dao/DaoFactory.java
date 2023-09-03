@@ -1,5 +1,12 @@
 package module.dao;
 
-public class DaoFactory {
+import module.dao.impl.SellerDaoJDBC;
 
+public class DaoFactory {
+	
+	public static SellerDao createSellerDao() {
+		
+		return new SellerDaoJDBC();
+	}
+	
 }
